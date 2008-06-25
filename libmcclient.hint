@@ -1,0 +1,10 @@
+category: Net
+requires: cygwin glib2 libdbus-glib_1_2 libtelepathy-glib0
+external-source: telepathy-mission-control
+sdesc: "Telepathy Mission Control MCClient library (runtime)"
+ldesc: "Mission Control is a Telepathy component providing a way for 
+end-user applications to abstract some of the details of connection 
+managers, to provide a simple way to manipulate a bunch of connection 
+managers at once, and to remove the need to have in each program the 
+account definitions and credentials."
+

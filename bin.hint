@@ -1,0 +1,9 @@
+category: Net
+requires: cygwin glib2 libmissioncontrol-client0 libmissioncontrol-server1
+sdesc: "Telepathy Mission Control component"
+ldesc: "Mission Control is a Telepathy component providing a way for 
+end-user applications to abstract some of the details of connection 
+managers, to provide a simple way to manipulate a bunch of connection 
+managers at once, and to remove the need to have in each program the 
+account definitions and credentials."
+
