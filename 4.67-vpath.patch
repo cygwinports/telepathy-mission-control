@@ -1,0 +1,15 @@
+--- origsrc/telepathy-mission-control-4.67/libmissioncontrol/Makefile.am	2008-07-16 01:34:33.000000000 -0500
++++ src/telepathy-mission-control-4.67/libmissioncontrol/Makefile.am	2008-12-16 03:34:49.415750000 -0600
+@@ -93,10 +93,10 @@
+ 	dbus-binding-tool --prefix=mc-client-lib --mode=glib-client $< > $@
+ 
+ %-marshal.h: %-marshal.list Makefile.am
+-	glib-genmarshal --header --prefix=$(subst -,_,$*)_marshal $< > $*-marshal.h
++	glib-genmarshal --header --prefix=$(subst -,_,$(*F))_marshal $< > $(*F)-marshal.h
+ 
+ %-marshal.c: %-marshal.list Makefile.am
+-	glib-genmarshal --body --prefix=$(subst -,_,$*)_marshal $< > $*-marshal.c
++	glib-genmarshal --body --prefix=$(subst -,_,$(*F))_marshal $< > $(*F)-marshal.c
+ 
+ mc-enum-types.h: stamp-mc-enum-types.h
+ 	@true

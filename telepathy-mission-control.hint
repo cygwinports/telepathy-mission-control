@@ -1,7 +1,6 @@
 category: Net
-requires: cygwin libmissioncontrol-server1 glib2-devel libdbus1-devel libdbus-glib_1-devel gettext libmissioncontrol-client-devel libtelepathy-glib-devel
-external-source: telepathy-mission-control
-sdesc: "Telepathy Mission Control server library (development)"
+requires: cygwin libglib2.0_0 libmissioncontrol-client0 libmissioncontrol-server1
+sdesc: "Telepathy Mission Control component"
 ldesc: "Mission Control is a Telepathy component providing a way for 
 end-user applications to abstract some of the details of connection 
 managers, to provide a simple way to manipulate a bunch of connection 
