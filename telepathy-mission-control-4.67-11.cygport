@@ -30,4 +30,6 @@ libmissioncontrol_server_devel_CONTENTS="usr/include/mission-control/
 
 DIFF_EXCLUDES="*-marshal.*"
 
-CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy"
+# sets password to "keyring" if using gnome-keyring, but doesn't
+# work properly outside of a GNOME session
+CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --disable-keyring"

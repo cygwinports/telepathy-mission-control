@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libgcc1 libgconf2_4 libglib2.0_0 libgnome-keyring0 libdbus1_3 libdbus-glib_1_2 libintl8 libtelepathy2 libtelepathy-glib0
+requires: cygwin libgcc1 libgconf2_4 libglib2.0_0 libdbus1_3 libdbus-glib_1_2 libintl8 libtelepathy2 libtelepathy-glib0
 external-source: telepathy-mission-control
 sdesc: "Telepathy Mission Control client library (runtime)"
 ldesc: "Mission Control is a Telepathy component providing a way for 
