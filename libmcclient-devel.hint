@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libmcclient5 libglib2.0-devel libdbus-glib_1-devel libtelepathy-glib-devel
+requires: libmcclient5 libglib2.0-devel libdbus-glib_1-devel libtelepathy-glib-devel
 external-source: telepathy-mission-control
 sdesc: "Telepathy Mission Control MCClient library (development)"
 ldesc: "Mission Control is a Telepathy component providing a way for 
