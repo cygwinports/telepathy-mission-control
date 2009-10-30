@@ -1,0 +1,31 @@
+--- origsrc/telepathy-mission-control-5.2.6/libmcclient/Makefile.am	2009-08-19 09:28:11.000000000 -0500
++++ src/telepathy-mission-control-5.2.6/libmcclient/Makefile.am	2009-10-29 12:40:17.840595000 -0500
+@@ -91,10 +91,10 @@ libmcclient_la_LDFLAGS += -release $(VER
+ endif
+ 
+ %-marshal.h: %-marshal.list Makefile.am
+-	glib-genmarshal --header --prefix=$(subst -,_,$*)_marshal $< > $*-marshal.h
++	glib-genmarshal --header --prefix=$(subst -,_,$(*F))_marshal $< > $*-marshal.h
+ 
+ %-marshal.c: %-marshal.list Makefile.am
+-	glib-genmarshal --body --prefix=$(subst -,_,$*)_marshal $< > $*-marshal.c
++	glib-genmarshal --body --prefix=$(subst -,_,$(*F))_marshal $< > $*-marshal.c
+ 
+ 
+ EXTRA_DIST = \
+--- origsrc/telepathy-mission-control-5.2.6/src/Makefile.am	2009-10-08 06:47:45.000000000 -0500
++++ src/telepathy-mission-control-5.2.6/src/Makefile.am	2009-10-29 12:40:41.890628200 -0500
+@@ -154,11 +154,11 @@ libmcd_convenience_la_SOURCES = \
+ 	$(mc_headers)
+ 
+ %-signals-marshal.h: %-signals-marshal.list Makefile
+-	glib-genmarshal --header --prefix=_$(subst -,_,$*)_marshal $< > $*-signals-marshal.h
++	glib-genmarshal --header --prefix=_$(subst -,_,$(*F))_marshal $< > $*-signals-marshal.h
+ 
+ %-signals-marshal.c: %-signals-marshal.list Makefile
+ 	{ echo '#include "$*-signals-marshal.h"' && \
+-	glib-genmarshal --body --prefix=_$(subst -,_,$*)_marshal $<; } \
++	glib-genmarshal --body --prefix=_$(subst -,_,$(*F))_marshal $<; } \
+ 	> $*-signals-marshal.c
+ 
+ mcd-enum-types.h: stamp-mcd-enum-types.h

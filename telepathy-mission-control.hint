@@ -1,5 +1,5 @@
 category: Net
-requires: libgcc1 libglib2.0_0 libmissioncontrol-client0 libmissioncontrol-server1
+requires: libdbus1_3 libdbus-glib_1_2 libgcc1 libgconf2_4 libglib2.0_0 libmcclient6 libtelepathy-glib0
 sdesc: "Telepathy Mission Control component"
 ldesc: "Mission Control is a Telepathy component providing a way for 
 end-user applications to abstract some of the details of connection 

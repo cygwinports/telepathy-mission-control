@@ -1,0 +1,21 @@
+inherit gnome2
+
+DESCRIPTION="Telepathy Mission Control component"
+HOMEPAGE="http://telepathy.freedesktop.org/"
+SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
+
+PATCH_URI="
+	5.2.6-no-undefined.patch
+	5.2.6-vpath.patch
+"
+
+PKG_NAMES="${PN} libmcclient6 libmcclient-devel"
+telepathy_mission_control_CONTENTS="--exclude=gtk-doc usr/bin/*.exe
+                                    usr/lib/telepathy/ usr/share/"
+libmcclient6_CONTENTS="usr/bin/cygmcclient-6.dll"
+libmcclient_devel_CONTENTS="usr/include/libmcclient/ usr/lib/libmcclient.*
+                            usr/lib/pkgconfig/libmcclient.pc usr/share/gtk-doc/"
+
+DIFF_EXCLUDES="*-marshal.*"
+
+CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --enable-mcclient-so6 --enable-mcserver-so6"

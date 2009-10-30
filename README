@@ -7,187 +7,56 @@ once, and to remove the need to have in each program the account
 definitions and credentials.
 
 Runtime requirements:
-  cygwin-1.7.0-50
+  cygwin-1.7.0-62
   libdbus-glib_1_2-0.80-10
-  libdbus1_3-1.2.14-1
-  libgcc1-4.3.2-2
-  libgconf2_4-2.26.2-1
-  libglib2.0_0-2.20.3-1
+  libdbus1_3-1.2.16-1
+  libgcc1-4.3.4-1
+  libgconf2_4-2.28.0-1
+  libglib2.0_0-2.22.2-1
   libintl8-0.17-11
-  libtelepathy-glib0-0.7.31-1
-  libtelepathy2-0.3.3-10
+  libtelepathy-glib0-0.8.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
-  automake1.10-1.10.2-10
-  binutils-20080624-2
-  cygport-0.9.7-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
-  gnome-common-2.26.0-2
-  libtool-2.2.7a-13
+  automake1.9-1.9.6-10
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-1
+  gnome-common-2.28.0-1
+  libtool-2.2.7a-14
   make-3.81-2
   pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
-  http://mission-control.sourceforge.net/
+  http://telepathy.freedesktop.org/wiki/
 
 Canonical download:
-  http://downloads.sourceforge.net/mission-control/
+  http://telepathy.freedesktop.org/releases/telepathy-mission-control/
 
 -------------------------------------------
 
 Build instructions:
-  unpack telepathy-mission-control-4.67-X-src.tar.bz2
+  unpack telepathy-mission-control-5.2.6-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./telepathy-mission-control-4.67-X.cygport all
+  cygport ./telepathy-mission-control-5.2.6-X.cygport all
 
 This will create:
-  /usr/src/libmcclient-devel-4.67-X.tar.bz2
-  /usr/src/libmcclient5-4.67-X.tar.bz2
-  /usr/src/libmissioncontrol-client-devel-4.67-X.tar.bz2
-  /usr/src/libmissioncontrol-client0-4.67-X.tar.bz2
-  /usr/src/libmissioncontrol-server-devel-4.67-X.tar.bz2
-  /usr/src/libmissioncontrol-server1-4.67-X.tar.bz2
-  /usr/src/telepathy-mission-control-4.67-X-src.tar.bz2
-  /usr/src/telepathy-mission-control-4.67-X.tar.bz2
+  /usr/src/libmcclient-devel-5.2.6-X.tar.bz2
+  /usr/src/libmcclient6-5.2.6-X.tar.bz2
+  /usr/src/telepathy-mission-control-5.2.6-X-src.tar.bz2
+  /usr/src/telepathy-mission-control-5.2.6-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(telepathy-mission-control)
-  /usr/bin/mc-account.exe
-  /usr/lib/telepathy/mission-control.exe
-  /usr/share/dbus-1/services/org.freedesktop.Telepathy.MissionControl.service
-  /usr/share/doc/telepathy-mission-control/AUTHORS
-  /usr/share/doc/telepathy-mission-control/COPYING
-  /usr/share/doc/telepathy-mission-control/ChangeLog
-
-(libmcclient5)
-  /usr/bin/cygmcclient-5.dll
-
-(libmissioncontrol-client0)
-  /usr/bin/cygmissioncontrol-client-0.dll
-
-(libmissioncontrol-server1)
-  /usr/bin/cygmissioncontrol-server-1.dll
-
-(libmcclient-devel)
-  /usr/include/libmcclient/_gen/cli-Account.h
-  /usr/include/libmcclient/_gen/cli-Account_Manager.h
-  /usr/include/libmcclient/_gen/enums.h
-  /usr/include/libmcclient/_gen/gtypes.h
-  /usr/include/libmcclient/_gen/interfaces.h
-  /usr/include/libmcclient/dbus-api.h
-  /usr/include/libmcclient/mc-account-manager.h
-  /usr/include/libmcclient/mc-account.h
-  /usr/include/libmcclient/mc-signals-marshal.h
-  /usr/lib/libmcclient.dll.a
-  /usr/lib/libmcclient.la
-  /usr/lib/pkgconfig/libmcclient.pc
-
-(libmissioncontrol-client-devel)
-  /usr/include/libmissioncontrol/_gen/cli-nmc4.h
-  /usr/include/libmissioncontrol/_gen/enums.h
-  /usr/include/libmissioncontrol/_gen/gtypes.h
-  /usr/include/libmissioncontrol/_gen/interfaces.h
-  /usr/include/libmissioncontrol/_gen/svc-nmc4.h
-  /usr/include/libmissioncontrol/cli-nmc4.h
-  /usr/include/libmissioncontrol/dbus-api.h
-  /usr/include/libmissioncontrol/mc-account-monitor.h
-  /usr/include/libmissioncontrol/mc-account.h
-  /usr/include/libmissioncontrol/mc-enum-types.h
-  /usr/include/libmissioncontrol/mc-manager.h
-  /usr/include/libmissioncontrol/mc-profile.h
-  /usr/include/libmissioncontrol/mc-protocol.h
-  /usr/include/libmissioncontrol/mc-signals-marshal.h
-  /usr/include/libmissioncontrol/mc.h
-  /usr/include/libmissioncontrol/mission-control-signals-marshal.h
-  /usr/include/libmissioncontrol/mission-control.h
-  /usr/include/libmissioncontrol/svc-nmc4.h
-  /usr/lib/libmissioncontrol-client.dll.a
-  /usr/lib/libmissioncontrol-client.la
-  /usr/lib/pkgconfig/libmissioncontrol.pc
-  /usr/share/gtk-doc/html/libmissioncontrol/McAccount.html
-  /usr/share/gtk-doc/html/libmissioncontrol/McAccountMonitor.html
-  /usr/share/gtk-doc/html/libmissioncontrol/McManager.html
-  /usr/share/gtk-doc/html/libmissioncontrol/McProfile.html
-  /usr/share/gtk-doc/html/libmissioncontrol/McProtocol.html
-  /usr/share/gtk-doc/html/libmissioncontrol/ch01.html
-  /usr/share/gtk-doc/html/libmissioncontrol/home.png
-  /usr/share/gtk-doc/html/libmissioncontrol/index.html
-  /usr/share/gtk-doc/html/libmissioncontrol/index.sgml
-  /usr/share/gtk-doc/html/libmissioncontrol/left.png
-  /usr/share/gtk-doc/html/libmissioncontrol/libmissioncontrol-mission-control.html
-  /usr/share/gtk-doc/html/libmissioncontrol/libmissioncontrol.devhelp
-  /usr/share/gtk-doc/html/libmissioncontrol/libmissioncontrol.devhelp2
-  /usr/share/gtk-doc/html/libmissioncontrol/right.png
-  /usr/share/gtk-doc/html/libmissioncontrol/style.css
-  /usr/share/gtk-doc/html/libmissioncontrol/up.png
-
-(libmissioncontrol-server-devel)
-  /usr/include/mission-control/_gen/enums.h
-  /usr/include/mission-control/_gen/gtypes.h
-  /usr/include/mission-control/_gen/interfaces.h
-  /usr/include/mission-control/_gen/svc-Account.h
-  /usr/include/mission-control/_gen/svc-Account_Manager.h
-  /usr/include/mission-control/mcd-account-manager.h
-  /usr/include/mission-control/mcd-account-priv.h
-  /usr/include/mission-control/mcd-account.h
-  /usr/include/mission-control/mcd-chan-handler.h
-  /usr/include/mission-control/mcd-channel.h
-  /usr/include/mission-control/mcd-connection.h
-  /usr/include/mission-control/mcd-controller.h
-  /usr/include/mission-control/mcd-debug.h
-  /usr/include/mission-control/mcd-dispatcher-context.h
-  /usr/include/mission-control/mcd-dispatcher.h
-  /usr/include/mission-control/mcd-enum-types.h
-  /usr/include/mission-control/mcd-manager.h
-  /usr/include/mission-control/mcd-master.h
-  /usr/include/mission-control/mcd-mission.h
-  /usr/include/mission-control/mcd-operation.h
-  /usr/include/mission-control/mcd-presence-frame.h
-  /usr/include/mission-control/mcd-provisioning-factory.h
-  /usr/include/mission-control/mcd-provisioning.h
-  /usr/include/mission-control/mcd-proxy.h
-  /usr/include/mission-control/mcd-service.h
-  /usr/lib/libmissioncontrol-server.dll.a
-  /usr/lib/libmissioncontrol-server.la
-  /usr/lib/pkgconfig/mission-control.pc
-  /usr/share/gtk-doc/html/libmissioncontrol-server/McdChannel.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/McdController.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/McdDispatcher.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/McdManager.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/McdMaster.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/McdMission.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/McdOperation.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/McdPresenceFrame.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/McdProxy.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/McdService.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/ch01.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/home.png
-  /usr/share/gtk-doc/html/libmissioncontrol-server/index.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/index.sgml
-  /usr/share/gtk-doc/html/libmissioncontrol-server/left.png
-  /usr/share/gtk-doc/html/libmissioncontrol-server/libmissioncontrol-server-mcd-chan-handler.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/libmissioncontrol-server-mcd-connection.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/libmissioncontrol-server-mcd-debug.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/libmissioncontrol-server-mcd-dispatcher-context.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/libmissioncontrol-server-mcd-enum-types.html
-  /usr/share/gtk-doc/html/libmissioncontrol-server/libmissioncontrol-server.devhelp
-  /usr/share/gtk-doc/html/libmissioncontrol-server/libmissioncontrol-server.devhelp2
-  /usr/share/gtk-doc/html/libmissioncontrol-server/right.png
-  /usr/share/gtk-doc/html/libmissioncontrol-server/style.css
-  /usr/share/gtk-doc/html/libmissioncontrol-server/up.png
-
-------------------
-
 Port Notes:
+
+----- version 5.2.6-1 -----
+Major version bump.
 
 ----- version 4.67-11 -----
 Disabled gnome-keyring support for proper operation outside of GNOME desktop.
