@@ -7,28 +7,28 @@ once, and to remove the need to have in each program the account
 definitions and credentials.
 
 Runtime requirements:
-  cygwin-1.7.0-62
-  libdbus-glib_1_2-0.80-10
+  cygwin-1.7.5-1
+  libdbus-glib_1_2-0.82-1
   libdbus1_3-1.2.16-1
-  libgcc1-4.3.4-1
+  libgcc1-4.3.4-3
   libgconf2_4-2.28.0-1
-  libglib2.0_0-2.22.2-1
+  libglib2.0_0-2.22.4-2
   libintl8-0.17-11
-  libtelepathy-glib0-0.8.1-1
+  libtelepathy-glib0-0.10.5-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
-  automake1.9-1.9.6-10
-  binutils-2.19.51-1
-  cygport-0.9.10-1
+  autoconf2.5-2.65-1
+  automake1.11-1.11.1-1
+  binutils-2.20.51-1
+  cygport-0.9.83-1
   gawk-3.1.7-1
-  gcc4-core-4.3.4-1
+  gcc4-core-4.3.4-3
   gnome-common-2.28.0-1
-  libtool-2.2.7a-14
+  libtool-2.2.7a-15
   make-3.81-2
   pkg-config-0.23b-10
-  sed-4.1.5-2
+  sed-4.2.1-1
 
 Canonical website:
   http://telepathy.freedesktop.org/wiki/
@@ -39,21 +39,24 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack telepathy-mission-control-5.2.6-X-src.tar.bz2
+  unpack telepathy-mission-control-5.4.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./telepathy-mission-control-5.2.6-X.cygport all
+  cygport ./telepathy-mission-control-5.4.0-X.cygport all
 
 This will create:
-  /usr/src/libmcclient-devel-5.2.6-X.tar.bz2
-  /usr/src/libmcclient6-5.2.6-X.tar.bz2
-  /usr/src/telepathy-mission-control-5.2.6-X-src.tar.bz2
-  /usr/src/telepathy-mission-control-5.2.6-X.tar.bz2
+  /usr/src/libmcclient-devel-5.4.0-X.tar.bz2
+  /usr/src/libmcclient6-5.4.0-X.tar.bz2
+  /usr/src/telepathy-mission-control-5.4.0-X-src.tar.bz2
+  /usr/src/telepathy-mission-control-5.4.0-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 5.4.0-1 -----
+Version bump.
 
 ----- version 5.2.6-1 -----
 Major version bump.

@@ -18,4 +18,4 @@ libmcclient_devel_CONTENTS="usr/include/libmcclient/ usr/lib/libmcclient.*
 
 DIFF_EXCLUDES="*-marshal.*"
 
-CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --enable-mcclient-so6 --enable-mcserver-so6"
+CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --enable-mcclient-so6"
