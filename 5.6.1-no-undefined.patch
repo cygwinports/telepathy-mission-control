@@ -1,0 +1,43 @@
+--- origsrc/telepathy-mission-control-5.6.1/libmcclient/Makefile.am	2010-12-16 00:31:00.759030900 -0600
++++ src/telepathy-mission-control-5.6.1/libmcclient/Makefile.am	2010-12-16 00:26:47.000000000 -0600
+@@ -88,7 +88,7 @@ libmcclient_la_LIBADD = \
+ 
+ if ENABLE_MCD_PLUGINS
+ libmcclient_la_LDFLAGS = \
+-	-export-symbols-regex "^(mc_)|(mission_control_)"
++	-export-symbols-regex "^(mc_)|(mission_control_)" -no-undefined
+ 
+ if ENABLE_MC_CLIENT_SO6
+ # the redundant quoting here is to prevent the libtool command line from
+--- origsrc/telepathy-mission-control-5.6.1/mission-control-plugins/Makefile.am	2010-09-14 10:00:09.000000000 -0500
++++ src/telepathy-mission-control-5.6.1/mission-control-plugins/Makefile.am	2010-12-16 00:30:48.201009000 -0600
+@@ -31,6 +31,7 @@ plugins_include_HEADERS = \
+ 
+ libmission_control_plugins_la_LDFLAGS = \
+ 	-export-symbols-regex "^(mcp_)" \
++	-no-undefined \
+ 	-version-info "@MCP_LT_CURRENT@":"@MCP_LT_REVISION@":"@MCP_LT_AGE@"
+ 
+ libmission_control_plugins_la_LIBADD = \
+--- origsrc/telepathy-mission-control-5.6.1/plugins/Makefile.am	2010-09-14 09:58:45.000000000 -0500
++++ src/telepathy-mission-control-5.6.1/plugins/Makefile.am	2010-12-16 00:30:25.639714100 -0600
+@@ -11,7 +11,7 @@ EXTRA_DIST =
+ 
+ instdir = @libdir@/mission-control-plugins.@MCP_ABI_VERSION@
+ 
+-plugin_LDFLAGS = -module -shared -avoid-version -rpath @abs_builddir@
++plugin_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ inst_LTLIBRARIES = 
+ 
+--- origsrc/telepathy-mission-control-5.6.1/src/Makefile.am	2010-12-16 00:31:00.774630900 -0600
++++ src/telepathy-mission-control-5.6.1/src/Makefile.am	2010-12-16 00:26:47.000000000 -0600
+@@ -113,7 +113,7 @@ libmissioncontrol_server_la_SOURCES =
+ libmissioncontrol_server_la_LIBADD = libmcd-convenience.la
+ 
+ libmissioncontrol_server_la_LDFLAGS = \
+-	-export-symbols-regex '^((mc_)|(mcd_)|(mission_control_))'
++	-export-symbols-regex '^((mc_)|(mcd_)|(mission_control_))' -no-undefined
+ 
+ if ENABLE_MC_SERVER_SO6
+ # the redundant quoting here is to prevent the libtool command line from

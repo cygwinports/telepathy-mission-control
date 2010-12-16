@@ -1,7 +1,7 @@
 category: Net
-requires: libdbus-glib_1_2 libgcc1 libglib2.0_0 libtelepathy-glib0
+requires: telepathy-mission-control libdbus-glib_1-devel libglib2.0-devel libtelepathy-glib-devel
 external-source: telepathy-mission-control
-sdesc: "Telepathy Mission Control MCClient library (runtime)"
+sdesc: "Telepathy Mission Control component (plugin development)"
 ldesc: "Mission Control is a Telepathy component providing a way for 
 end-user applications to abstract some of the details of connection 
 managers, to provide a simple way to manipulate a bunch of connection 

@@ -1,0 +1,21 @@
+inherit gnome2
+
+DESCRIPTION="Telepathy Mission Control component"
+HOMEPAGE="http://telepathy.freedesktop.org/"
+SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
+
+PATCH_URI="
+	5.6.1-no-undefined.patch
+	5.2.6-vpath.patch
+"
+
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="setup devel"
+telepathy_mission_control_CONTENTS="--exclude=gtk-doc usr/bin/
+                                    usr/lib/telepathy/ usr/share/"
+telepathy_mission_control_devel_CONTENTS="usr/include/ usr/lib/lib*
+                                          usr/lib/pkgconfig/ usr/share/gtk-doc/"
+
+DIFF_EXCLUDES="*-marshal.*"
+
+CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --enable-gnome-keyring"
