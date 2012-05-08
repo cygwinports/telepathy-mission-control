@@ -4,8 +4,6 @@ DESCRIPTION="Telepathy Mission Control component"
 HOMEPAGE="http://telepathy.freedesktop.org/"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
-PATCH_URI="5.10.1-no-undefined.patch"
-
 PKG_NAMES="${PN} ${PN}-devel"
 PKG_HINTS="setup devel"
 telepathy_mission_control_CONTENTS="--exclude=gtk-doc etc/ usr/bin/
@@ -16,3 +14,5 @@ telepathy_mission_control_devel_CONTENTS="usr/include/ usr/lib/lib*
 DIFF_EXCLUDES="*-marshal.*"
 
 CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --enable-gnome-keyring"
+
+KEEP_LA_FILES="none"
