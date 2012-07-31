@@ -1,13 +1,19 @@
 inherit gnome2
 
-DESCRIPTION="Telepathy Mission Control component"
+CATEGORY="Net"
+SUMMARY="Telepathy Mission Control component"
+DESCRIPTION="Mission Control is a Telepathy component providing a way for
+end-user applications to abstract some of the details of connection
+managers, to provide a simple way to manipulate a bunch of connection
+managers at once, and to remove the need to have in each program the
+account definitions and credentials."
 HOMEPAGE="http://telepathy.freedesktop.org/"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 PKG_NAMES="${PN} ${PN}-devel"
-PKG_HINTS="setup devel"
 telepathy_mission_control_CONTENTS="--exclude=gtk-doc etc/ usr/bin/
                                     usr/lib/telepathy/ usr/share/"
+telepathy_mission_control_devel_SUMMARY="${SUMMARY} (plugin development)"
 telepathy_mission_control_devel_CONTENTS="usr/include/ usr/lib/lib*
                                           usr/lib/pkgconfig/ usr/share/gtk-doc/"
 
