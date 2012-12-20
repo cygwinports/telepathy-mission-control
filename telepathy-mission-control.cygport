@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="telepathy-mission-control"
-VERSION=5.12.2
+VERSION=5.14.0
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Telepathy Mission Control component"
@@ -23,5 +23,3 @@ telepathy_mission_control_devel_CONTENTS="usr/include/ usr/lib/lib*
 DIFF_EXCLUDES="*-marshal.*"
 
 CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --enable-gnome-keyring"
-
-KEEP_LA_FILES="none"
