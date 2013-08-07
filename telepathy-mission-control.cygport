@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="telepathy-mission-control"
-VERSION=5.14.0
+VERSION=5.14.1
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Telepathy Mission Control component"
@@ -11,15 +11,13 @@ managers, to provide a simple way to manipulate a bunch of connection
 managers at once, and to remove the need to have in each program the
 account definitions and credentials."
 HOMEPAGE="http://telepathy.freedesktop.org/"
-SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
+SRC_URI="http://telepathy.freedesktop.org/releases/${NAME}/${NAME}-${VERSION}.tar.gz"
 
-PKG_NAMES="${PN} ${PN}-devel"
-telepathy_mission_control_CONTENTS="--exclude=gtk-doc etc/ usr/bin/
-                                    usr/lib/telepathy/ usr/share/"
+PKG_NAMES="${NAME} ${NAME}-devel"
+telepathy_mission_control_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/libexec/ usr/share/"
 telepathy_mission_control_devel_SUMMARY="${SUMMARY} (plugin development)"
-telepathy_mission_control_devel_CONTENTS="usr/include/ usr/lib/lib*
-                                          usr/lib/pkgconfig/ usr/share/gtk-doc/"
+telepathy_mission_control_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"
 
 DIFF_EXCLUDES="*-marshal.*"
 
-CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --enable-gnome-keyring"
+CYGCONF_ARGS="--enable-gnome-keyring"
