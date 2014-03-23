@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="telepathy-mission-control"
-VERSION=5.14.1
+VERSION=5.16.1
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Telepathy Mission Control component"
@@ -13,10 +13,12 @@ account definitions and credentials."
 HOMEPAGE="http://telepathy.freedesktop.org/"
 SRC_URI="http://telepathy.freedesktop.org/releases/${NAME}/${NAME}-${VERSION}.tar.gz"
 
-PKG_NAMES="${NAME} ${NAME}-devel"
+PKG_NAMES="${NAME} ${NAME}-devel ${NAME}-doc"
 telepathy_mission_control_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/libexec/ usr/share/"
 telepathy_mission_control_devel_SUMMARY="${SUMMARY} (plugin development)"
-telepathy_mission_control_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"
+telepathy_mission_control_devel_CONTENTS="usr/include/ usr/lib/"
+telepathy_mission_control_doc_CATEGORY="Doc"
+telepathy_mission_control_doc_CONTENTS="usr/share/gtk-doc/"
 
 DIFF_EXCLUDES="*-marshal.*"
 
