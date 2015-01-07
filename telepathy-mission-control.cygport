@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="telepathy-mission-control"
-VERSION=5.16.1
+VERSION=5.16.3
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Telepathy Mission Control component"
@@ -22,4 +22,4 @@ telepathy_mission_control_doc_CONTENTS="usr/share/gtk-doc/"
 
 DIFF_EXCLUDES="*-marshal.*"
 
-CYGCONF_ARGS="--enable-gnome-keyring"
+CYGCONF_ARGS="--enable-gnome-keyring --disable-upower"
